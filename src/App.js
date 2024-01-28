@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Topbar from "./components/Topbar/Topbar"
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import  Login from "./pages/Login/Login";
+import  Team from "./pages/Team/Team";
+import "./styles/App.css";
+// import  ElectricityPieChart from "./pages/ElectricityPieChart/ElectricityPieChart";
+// import  ElectricityLineChart from "./pages/ElectricityLineChart/ElectricityLineChart";
+// import  WaterLineChart from "./pages/WaterLineChart/WaterLineChart";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+   <div className="app"> 
+    <main>
+      <Topbar/>
+    <Routes>
+      <Route path="/" element={<DashboardPage />} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/team" element={<Team />} />
+      {/* <Route path="/electricityPieChart" element={<ElectricityPieChart />} />
+      <Route path="/electricityLineChart" element={<ElectricityLineChart />} />
+      <Route path="/waterLineChart" element={<WaterLineChart />} /> */}
+      </Routes>
+      </main>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,42 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px; 
+    &__search {
+      display: flex;
+      background-color: #1F2A40;
+      border-radius: 3px;
+      &-input {
+        margin-left: 8px;
+        flex: 1;
+        padding: 8px;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+      
+      &-button {
+        padding: 8px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+      }
+    } 
+    &__icons {
+      display: flex;
+      &-icon {
+        padding: 8px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  
