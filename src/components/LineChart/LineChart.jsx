@@ -1,14 +1,12 @@
-import './LineChart.scss'; 
-import colors from "../../styles/partials/variables.scss"
 import {ResponsiveLine} from "@nivo/line";//for creating line chart
 import energyData from "../../data/energyData.json"
-
+import './LineChart.scss'; 
+import colors from "../../styles/partials/variables.scss"
 const LineChart = () => {
   return (
-    <div style={{ height: 400 }}>
+    <div className="lineChart" style={{ height: 300 }}>
       <ResponsiveLine
         data={energyData}
-        
         //define the theme of chart
         theme={{axis: {
           domain: {
@@ -72,6 +70,7 @@ const LineChart = () => {
         //smooth transition
         curve="natural"
       />
+      <p className="lineChart__title">Monthly eletricity consumption</p>
     </div>
   );
   }

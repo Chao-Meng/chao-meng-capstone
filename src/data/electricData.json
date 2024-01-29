@@ -1,0 +1,20 @@
+[
+    {
+      "id": "AC system",
+      "label": "AC system",
+      "value": 55,
+      "color": "hsl(53, 70%, 50%)"
+    },
+    {
+      "id": "Elevator System",
+      "label": "Elevator System",
+      "value": 30,
+      "color": "hsl(219, 70%, 50%)"
+    },
+    {
+      "id": "Lighting system",
+      "label": "Lighting system",
+      "value": 15,
+      "color": "hsl(89, 70%, 50%)"
+    }
+]

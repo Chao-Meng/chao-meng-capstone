@@ -11,7 +11,7 @@ const DashBoard=()=>{
         <div className="dashboard__container--header">
           <div className="dashboard__container--title">
             <p className="dashboard__container--h5">Energy Consumption</p>
-            <h3 className="dashboard__container--h3">$xxxxxxx</h3>
+            <h3 className="dashboard__container--h3">xxxxxxx</h3>
           </div>
           <div className="dashboard__container-actions">
             <button className="dashboard__container--download">
