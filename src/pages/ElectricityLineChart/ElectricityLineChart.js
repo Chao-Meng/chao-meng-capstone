@@ -1,4 +1,4 @@
-import "./ElectricityLineChart";
+import "./ElectricityLineChart.scss";
 
 const ElectricityLineChart=()=>{
     return(<>

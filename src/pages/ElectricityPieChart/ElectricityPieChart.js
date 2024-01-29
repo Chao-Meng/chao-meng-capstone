@@ -1,4 +1,4 @@
-import "./ElectricityPieChart";
+import "./ElectricityPieChart.scss";
 
 const ElectricityPieChart=()=>{
     return(<>

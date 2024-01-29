@@ -1,4 +1,4 @@
-import "./WaterLineChart";
+import "./WaterLineChart.scss";
 
 const WaterLineChart=()=>{
     return(<>
