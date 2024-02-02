@@ -187,7 +187,6 @@ Input Parameters: Device name, details of maintenance or alarm.
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
-![dashboard page1](./dashboard.jpg)
 Login:login via email and verify code
 Dashboard:my main page, shows all function, please see the pic.
 Team Member and admin authority:manager team member and admin.
@@ -198,7 +197,7 @@ WaterData Line Chart:a line chart from dashboard, but it occupy the whole page.
 ### Mockups
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
-![dashboard](./dashboard.png)
+![dashboard](./dashboard.jpg)
 other pages almost comes from this dashboard
 ### Data
 
