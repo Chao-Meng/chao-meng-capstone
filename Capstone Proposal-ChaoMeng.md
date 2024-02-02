@@ -155,12 +155,12 @@ List technologies that will be used in your app, including any libraries to save
 ### APIs
 
 List any external sources of data that will be used in your app.
-**Since I can't access the sensors to get the data, if I have enough time ,i will create my home-built APIs, and some fake data.If not I will use json file to store my mock data.
-**1. Energy Usage Data API
-**GET /api/energy
+\*\*Since I can't access the sensors to get the data, if I have enough time ,i will create my home-built APIs, and some fake data.If not I will use json file to store my mock data.
+\*\*1. Energy Usage Data API
+\*\*GET /api/energy
 Description: Retrieve current energy usage data, including electricity and water consumption.
 Return Value: Timestamp, electricity consumption, water consumption.
-**2. Environmental Control Data API
+\*\*2. Environmental Control Data API
 \*\*GET /api/environment
 
 Description: Get current environmental control data, such as indoor temperature, humidity, etc.
@@ -169,12 +169,12 @@ Return Value: Indoor temperature, humidity, lighting level.
 
 Description: Update environmental control settings.
 Input Parameters: New temperature setting, humidity setting, lighting level.
-**3. Weather Data API
-**GET /api/weather
+\*\*3. Weather Data API
+\*\*GET /api/weather
 Description: Obtain simulated external weather data.
 Return Value: Current temperature, weather condition (sunny, rainy, etc.), probability of precipitation.
-**4. Maintenance and Alarm Log API
-**GET /api/maintenance
+\*\*4. Maintenance and Alarm Log API
+\*\*GET /api/maintenance
 
 Description: Obtain equipment maintenance and alarm logs.
 Return Value: Device name, maintenance date, type of alert, status.
@@ -187,12 +187,12 @@ Input Parameters: Device name, details of maintenance or alarm.
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
-Login:login via email and verify code
-Dashboard:my main page, shows all function, please see the pic.
-Team Member and admin authority:manager team member and admin.
-Total energy consumption Pie Chart:a pie chart from dashboard, but it occupy the whole page.
-ElectricityData Line Chart:a line chart from dashboard, but it occupy the whole page.
-WaterData Line Chart:a line chart from dashboard, but it occupy the whole page.
+\*\*Login:login via email and verify code
+\*\*Dashboard:my main page, shows all function, please see the pic.
+\*\*Team Member and admin authority:manager team member and admin.
+\*\*Total energy consumption Pie Chart:a pie chart from dashboard, but it occupy the whole page.
+\*\*ElectricityData Line Chart:a line chart from dashboard, but it occupy the whole page.
+\*\*WaterData Line Chart:a line chart from dashboard, but it occupy the whole page.
 
 ### Mockups
 
@@ -204,12 +204,12 @@ other pages almost comes from this dashboard
 I will make some mock data for electricity and water consumption.I am not sure if I will store them in database or json, it depends on time.
 
 ### Endpoints
-Login:"/login" get
-Dashboard:"/"  get
-Team Member and admin authority:"/team" get(display all memebers), post(add new member),delete(delete some members)
-Total energy consumption Pie Chart:"/electricityPieChart" get 
-ElectricityData Line Chart:"/electricityLineChart" get 
-WaterData Line Chart:"/waterLineChart" get 
+\*\*Login:"/login" get
+\*\*Dashboard:"/"  get
+\*\*Team Member and admin authority:"/team" get(display all memebers), post(add new member),delete(delete some members)
+\*\*Total energy consumption Pie Chart:"/electricityPieChart" get 
+\*\*ElectricityData Line Chart:"/electricityLineChart" get 
+\*\*WaterData Line Chart:"/waterLineChart" get 
 
 ### Auth
 
@@ -217,23 +217,23 @@ Login via email and verify code(expiry 5 min)
 
 ## Roadmap
 
-Part 1 (4 days)
+\*\*Part 1 (4 days)
 Project Planning and Requirements Analysis: 1 day
 Technology Selection and API Design: 1 day
 Development Environment Setup and Backend Foundation: 2 days
 
-Part 2 (5 days)
+\*\*Part 2 (5 days)
 Basic Frontend Development (Page Structure and Interaction Design): 2 days
 Data Binding and Style Design: 2 days
 Feature Development Start (Energy Monitoring): 1 day
 
-Part 3 (5 days)
+\*\*Part 3 (5 days)
 Feature Development Completion (Energy Monitoring, Environmental Control): 2 days
 Reporting and Alert System: 1 day
 User Feedback and Maintenance Interface: 1 day
 Test Preparation (Writing Unit Tests): 1 day
 
-Part 4 (6 days)
+\*\*Part 4 (6 days)
 Integration Testing and User Testing: 2 days
 Performance Optimization and User Experience Adjustments: 2 days
 Deployment and Documentation Writing: 1 day
