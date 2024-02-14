@@ -1,18 +1,34 @@
-import { ResponsivePie } from '@nivo/pie';
-import electricData from "../../data/electricData.json"
-import './PieChart.scss'; 
-import colors from "../../styles/partials/variables.scss"
+import { ResponsivePie } from "@nivo/pie";
+import { useState, useEffect } from "react";
+import axios from "axios";
+//import electricData from "../../data/electricData.json"
+import "./PieChart.scss";
+import colors from "../../styles/partials/variables.scss";
 
 const PieChart = () => {
-    const theme = {
-        labels: {
-          text: {
-            fontFamily: 'Arial, sans-serif',
-            fill: colors.White
-          }
-        }
-      };
-      
+  const [electricData, setElectricData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/electricData");
+        setElectricData(response.data);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const theme = {
+    labels: {
+      text: {
+        fontFamily: "Arial, sans-serif",
+        fill: colors.White,
+      },
+    },
+  };
+
   return (
     <div className="pieChart" style={{ height: 300 }}>
       <ResponsivePie
@@ -22,12 +38,12 @@ const PieChart = () => {
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}
-        colors={{ scheme: 'accent' }}
+        colors={{ scheme: "accent" }}
         borderWidth={1}
-        borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
+        borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
       />
-      <p className='pieChart__title'>Percentage of total energy consumption</p>
+      <p className="pieChart__title">Percentage of total energy consumption</p>
     </div>
-  )
-}
-  export default PieChart
+  );
+};
+export default PieChart;
