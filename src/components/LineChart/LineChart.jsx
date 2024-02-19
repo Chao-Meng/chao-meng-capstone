@@ -1,32 +1,33 @@
 import { ResponsiveLine } from "@nivo/line"; //for creating line chart
 import { useEffect, useState } from "react";
-//import energyData from "../../data/energyData.json"
+//import energyData from "../../data/energyData.json";
 import "./LineChart.scss";
 import colors from "../../styles/partials/variables.scss";
-const LineChart = () => {
-  const [energyData, setEnergyData] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8080/data")
-      .then((response) => response.json())
-      .then((data) => {
-        const formattedData = [
-          {
-            id: "electronic",
-            color: "#FFFFFF",
-            data: data.map((item) => ({
-              x: item.month,
-              y: item.consumption,
-            })),
-          },
-        ];
-        setEnergyData(formattedData);
-      });
-  }, []);
+const LineChart = ({ data, title }) => {
+  // const [energyData, setEnergyData] = useState([]);
+  // useEffect(() => {
+  //   fetch("http://localhost:8080/energyData")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       const transformedData = [
+  //         {
+  //           id: "energyConsumption",
+  //           color: "#FFFFFF",
+  //           data: data.map((series) => series.data[0]),
+  //         },
+  //       ];
+  //       console.log("Transformed data for Nivo:", transformedData);
+  //       setEnergyData(transformedData);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data:", error);
+  //     });
+  // }, []);
   return (
     <div className="lineChart" style={{ height: 300 }}>
       <ResponsiveLine
-        data={energyData}
+        // data={energyData}
+        data={data}
         //define the theme of chart
         theme={{
           axis: {
@@ -97,7 +98,7 @@ const LineChart = () => {
         //smooth transition
         curve="natural"
       />
-      <p className="lineChart__title">Monthly eletricity consumption</p>
+      <p className="lineChart__title">Monthly {title} consumption</p>
     </div>
   );
 };

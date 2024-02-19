@@ -1,7 +1,11 @@
+import LineChart from "../../components/LineChart/LineChart";
 import "./ElectricityLineChart.scss";
 
-const ElectricityLineChart=()=>{
-    return(<>
-    </>)
-}
-export default ElectricityLineChart
+const ElectricityLineChart = () => {
+  return (
+    <>
+      <LineChart />
+    </>
+  );
+};
+export default ElectricityLineChart;

@@ -1,12 +1,16 @@
 import "./DashBoard.scss";
-import Header from "../../components/Header/Header"
-import PieChart from "../../components/PieChart/PieChart"
-import LineChart  from "../../components/LineChart/LineChart";
+import Header from "../../components/Header/Header";
+import PieChart from "../../components/PieChart/PieChart";
+import ElectricityLineChart from "../../components/ElectricityLineChart/ElectricityLineChart";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-const DashBoard=()=>{
-    return(
+const DashBoard = () => {
+  return (
     <div className="dashboard">
-      <Header className="dashboard__header" title="Dashboard"  subtitle="Welcome to Energy Dashboard"/>
+      <Header
+        className="dashboard__header"
+        title="Dashboard"
+        subtitle="Welcome to Energy Dashboard"
+      />
       <div className="dashboard__container">
         <div className="dashboard__container--header">
           <div className="dashboard__container--title">
@@ -15,15 +19,20 @@ const DashBoard=()=>{
           </div>
           <div className="dashboard__container-actions">
             <button className="dashboard__container--download">
-            <DownloadOutlinedIcon/>
+              <DownloadOutlinedIcon />
             </button>
           </div>
         </div>
         <div className="dashboard__chart">
-          <div><PieChart/></div>
-         <div><LineChart /></div> 
+          <div>
+            <PieChart />
+          </div>
+          <div>
+            <ElectricityLineChart />
+          </div>
         </div>
       </div>
-    </div>)
-}
-export default DashBoard
+    </div>
+  );
+};
+export default DashBoard;
