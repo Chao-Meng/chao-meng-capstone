@@ -2,6 +2,7 @@ import "./DashBoard.scss";
 import Header from "../../components/Header/Header";
 import PieChart from "../../components/PieChart/PieChart";
 import ElectricityLineChart from "../../components/ElectricityLineChart/ElectricityLineChart";
+import WaterLineChart from "../../components/WaterLineChart/WaterLineChart";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 const DashBoard = () => {
   return (
@@ -29,6 +30,9 @@ const DashBoard = () => {
           </div>
           <div>
             <ElectricityLineChart />
+          </div>
+          <div>
+            <WaterLineChart />
           </div>
         </div>
       </div>
