@@ -30,7 +30,7 @@ const PieChart = () => {
   };
 
   return (
-    <div className="pieChart" style={{ height: 300 }}>
+    <div className="pieChart">
       <ResponsivePie
         data={electricData}
         theme={theme}

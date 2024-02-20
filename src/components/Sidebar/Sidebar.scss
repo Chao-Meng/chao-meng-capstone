@@ -1,0 +1,19 @@
+.Box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
+  background-color: transparent;
+  height: 100vh;
+  &__container {
+    margin-right: 1.56rem;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.Prosidebar {
+  background-color: green;
+}
