@@ -4,13 +4,15 @@ import Topbar from "./components/Topbar/Topbar";
 import DashBoard from "./pages/DashBoard/DashBoard";
 import Login from "./pages/Login/Login";
 import Team from "./pages/Team/Team";
+import ElectricityPieChart from "./pages/ElectricityPieChart/ElectricityPieChart";
+import ElectricityLineChartPage from "./pages/ElectricityLineChartPage/ElectricityLineChartPage";
 import { ColorModeContext, useMode } from "./theme";
 import "./styles/global.scss";
 import "./styles/App.css";
 
 // import  ElectricityPieChart from "./pages/ElectricityPieChart/ElectricityPieChart";
 // import  ElectricityLineChart from "./pages/ElectricityLineChart/ElectricityLineChart";
-// import  WaterLineChart from "./pages/WaterLineChart/WaterLineChart";
+import WaterLineChartPage from "./pages/WaterLineChartPage/WaterLineChartPage";
 function App() {
   // const [theme, colorMode] = useMode();
   return (
@@ -23,9 +25,18 @@ function App() {
             <Route path="/" element={<DashBoard />} />
             <Route path="/login" element={<Login />} />
             <Route path="/team" element={<Team />} />
-            {/* <Route path="/electricityPieChart" element={<ElectricityPieChart />} />
-      <Route path="/electricityLineChart" element={<ElectricityLineChart />} />
-      <Route path="/waterLineChart" element={<WaterLineChart />} /> */}
+            <Route
+              path="/electricityPieChart"
+              element={<ElectricityPieChart />}
+            />
+            <Route
+              path="/electricityLineChartPage"
+              element={<ElectricityLineChartPage />}
+            />
+            <Route
+              path="/waterLineChartPage"
+              element={<WaterLineChartPage />}
+            />
           </Routes>
         </main>
       </BrowserRouter>

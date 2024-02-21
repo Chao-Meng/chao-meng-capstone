@@ -1,0 +1,22 @@
+.piechart {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    &--small {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      flex-direction: column;
+    }
+  }
+
+  &__chart {
+    height: 50vh;
+    width: 100%;
+    transform: scale(2);
+    transform-origin: top;
+  }
+}

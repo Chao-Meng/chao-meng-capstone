@@ -98,7 +98,7 @@ const LineChart = ({ data, title }) => {
         //smooth transition
         curve="natural"
       />
-      <p className="lineChart__title">Monthly {title} consumption</p>
+      {/* <p className="lineChart__title">Monthly {title} consumption</p> */}
     </div>
   );
 };

@@ -16,7 +16,6 @@ const PieChart = () => {
         console.error("Error fetching data: ", error);
       }
     };
-
     fetchData();
   }, []);
 
@@ -42,7 +41,7 @@ const PieChart = () => {
         borderWidth={1}
         borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
       />
-      <p className="pieChart__title">Percentage of total energy consumption</p>
+      {/* <p className="pieChart__title">Percentage of total energy consumption</p> */}
     </div>
   );
 };
