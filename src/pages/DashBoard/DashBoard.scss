@@ -74,5 +74,14 @@
   }
   &__other {
     width: 25.5vw;
+    display: flex;
+    flex-direction: column;
+  }
+  &__weathertable,
+  &__scrolltable {
+    margin-left: 1rem;
+  }
+  &__moreicons {
+    margin-left: 1rem;
   }
 }

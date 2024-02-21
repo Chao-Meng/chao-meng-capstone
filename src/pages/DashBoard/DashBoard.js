@@ -9,12 +9,14 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Topbar from "../../components/Topbar/Topbar";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
 import WaterDropIcon from "@mui/icons-material/WaterDrop";
+import ThermostatIcon from "@mui/icons-material/Thermostat";
 // import ExploreIcon from "@mui/icons-material/Explore";
 // import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import building from "../../assets/images/building.png";
 import Table from "../../components/Table/Table";
 import WeatherTable from "../../components/WeatherTable/WeatherTable";
+import ScrollTable from "../../components/ScrollTable/ScrollTable";
 // import { tokens } from "../../theme";
 // import { Box, IconButton, Typography, useTheme } from "@mui/material";
 // import { MenuItem } from "react-pro-sidebar";
@@ -85,8 +87,33 @@ const DashBoard = () => {
             </div>
           </div>
           <div className="dashboard__other">
-            <p>whether for the next three days</p>
-            <WeatherTable />
+            <div className="dashboard__weathertable">
+              <p>whether for the next three days</p>
+              <WeatherTable />
+            </div>
+            <div className="dashboard__scrolltable">
+              <p>Electricity consumption stastistics per office unit</p>
+              <ScrollTable />
+            </div>
+            <div className="dashboard__moreicons">
+              <p>Equipment statistics</p>
+              <div>
+                <FlashOnIcon className="dashboard__icon" />
+                <p>
+                  electricity meters:
+                  <br />
+                  xxx
+                </p>
+              </div>
+              <div>
+                <WaterDropIcon className="dashboard__icon" />
+                <p>water meters: xxxx</p>
+              </div>
+              <div>
+                <ThermostatIcon className="dashboard__icon" />
+                <p>temperature sensors: xxxx</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

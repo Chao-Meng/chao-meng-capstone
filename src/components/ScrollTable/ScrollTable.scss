@@ -1,0 +1,22 @@
+.table-container {
+  max-height: 300px;
+  overflow-y: auto;
+  color: white;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+      //background: white;
+    }
+    th {
+      position: sticky;
+      // top: 0;
+      z-index: 10;
+      //background-color: #eee;
+    }
+  }
+}
