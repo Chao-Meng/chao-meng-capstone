@@ -52,11 +52,12 @@
   }
   &__icons {
     // width: 28vw;
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
   &__icon {
     color: white;
@@ -69,7 +70,7 @@
   }
   &__alarm {
     color: white;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   &__other {
     width: 25.5vw;

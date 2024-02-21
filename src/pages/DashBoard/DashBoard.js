@@ -13,7 +13,7 @@ import WaterDropIcon from "@mui/icons-material/WaterDrop";
 // import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import building from "../../assets/images/building.png";
-
+import Table from "../../components/Table/Table";
 // import { tokens } from "../../theme";
 // import { Box, IconButton, Typography, useTheme } from "@mui/material";
 // import { MenuItem } from "react-pro-sidebar";
@@ -80,6 +80,7 @@ const DashBoard = () => {
             </div>
             <div className="dashboard__alarm">
               <p>Alarm data</p>
+              <Table />
             </div>
           </div>
           <div className="dashboard__other">
