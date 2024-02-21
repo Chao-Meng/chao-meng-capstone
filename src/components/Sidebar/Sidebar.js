@@ -4,7 +4,6 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
@@ -84,13 +83,15 @@ const Sidebar = () => {
         </Box>
 
         <Box paddingLeft={"10%"}>
-          <Item
-            title="Dashboard"
-            newPage="/"
-            icon={<HomeOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          />
+          <Link to="/" className="Box__link">
+            <Item
+              title="Dashboard"
+              newPage="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          </Link>
           <Item
             title="Team Member"
             newPage="/teamMember"

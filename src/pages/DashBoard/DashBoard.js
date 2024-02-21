@@ -14,6 +14,7 @@ import WaterDropIcon from "@mui/icons-material/WaterDrop";
 import "react-pro-sidebar/dist/css/styles.css";
 import building from "../../assets/images/building.png";
 import Table from "../../components/Table/Table";
+import WeatherTable from "../../components/WeatherTable/WeatherTable";
 // import { tokens } from "../../theme";
 // import { Box, IconButton, Typography, useTheme } from "@mui/material";
 // import { MenuItem } from "react-pro-sidebar";
@@ -84,7 +85,8 @@ const DashBoard = () => {
             </div>
           </div>
           <div className="dashboard__other">
-            <p>whether</p>
+            <p>whether for the next three days</p>
+            <WeatherTable />
           </div>
         </div>
       </section>

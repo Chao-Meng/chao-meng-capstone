@@ -1,0 +1,18 @@
+.weatherTable {
+  //font-family: Arial, sans-serif;
+  color: white;
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+  }
+
+  &__th,
+  &__td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: center;
+  }
+}
