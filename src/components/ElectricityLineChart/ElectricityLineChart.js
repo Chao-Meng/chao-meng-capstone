@@ -22,7 +22,11 @@ const ElectricityLineChart = () => {
   }, []);
   return (
     <>
-      <LineChart data={energyData} title="eletricity" />{" "}
+      <LineChart
+        data={energyData}
+        title="eletricity"
+        vertical="Energy Consumption KW/h"
+      />{" "}
     </>
   );
 };

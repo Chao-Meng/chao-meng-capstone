@@ -54,9 +54,13 @@ const DashBoard = () => {
             </div>
             <div>
               <ElectricityLineChart />
+              {/* <p className="linechart__title">
+                Monthly electricity consumption
+              </p> */}
             </div>
             <div>
               <WaterLineChart />
+              {/* //<p className="linechart__title">Monthly water consumption</p> */}
             </div>
           </div>
           <div className="dashboard__middlenCol">

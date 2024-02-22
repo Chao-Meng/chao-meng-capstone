@@ -92,20 +92,15 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
           </Link>
-          <Item
-            title="Team Member"
-            newPage="/teamMember"
-            icon={<PeopleOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          />
-          <Item
-            title="Contacts Information"
-            newPage="/contacts"
-            icon={<ContactsOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          />
+          <Link to="/team" className="Box__link">
+            <Item
+              title="Team Member"
+              newPage="/teamMember"
+              icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          </Link>
 
           <Item
             title="Profile Form"

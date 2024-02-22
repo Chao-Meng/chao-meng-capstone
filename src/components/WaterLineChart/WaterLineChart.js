@@ -22,7 +22,11 @@ const WaterLineChart = () => {
   }, []);
   return (
     <>
-      <LineChart data={waterData} title="water" />{" "}
+      <LineChart
+        data={waterData}
+        title="water"
+        vertical="Water consumption t"
+      />{" "}
     </>
   );
 };

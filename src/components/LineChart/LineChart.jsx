@@ -3,26 +3,7 @@ import { useEffect, useState } from "react";
 //import energyData from "../../data/energyData.json";
 import "./LineChart.scss";
 import colors from "../../styles/partials/variables.scss";
-const LineChart = ({ data, title }) => {
-  // const [energyData, setEnergyData] = useState([]);
-  // useEffect(() => {
-  //   fetch("http://localhost:8080/energyData")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       const transformedData = [
-  //         {
-  //           id: "energyConsumption",
-  //           color: "#FFFFFF",
-  //           data: data.map((series) => series.data[0]),
-  //         },
-  //       ];
-  //       console.log("Transformed data for Nivo:", transformedData);
-  //       setEnergyData(transformedData);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching data:", error);
-  //     });
-  // }, []);
+const LineChart = ({ data, title, vertical }) => {
   return (
     <div className="lineChart" style={{ height: 300 }}>
       <ResponsiveLine
@@ -81,7 +62,8 @@ const LineChart = ({ data, title }) => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Energy Consumption KW/h",
+          legend: vertical,
+          // Energy Consumption KW/h",
           legendOffset: -40,
           legendPosition: "middle",
         }}
