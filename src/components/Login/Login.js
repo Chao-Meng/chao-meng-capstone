@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+  const navigate = useNavigate();
   const handleLogin = async (event) => {
     const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
     event.preventDefault();
@@ -24,6 +25,7 @@ const Login = () => {
 
       if (response.ok) {
         console.log("Login successful:", data);
+        navigate("/");
       } else {
         setError(data.message || "Login failed");
       }
@@ -33,11 +35,11 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <form onSubmit={handleLogin} className="login-form">
+    <div className="login__container">
+      <form onSubmit={handleLogin} className="login__form">
         <h2>Login</h2>
-        {error && <p className="error-message">{error}</p>}
-        <div className="form-field">
+        {error && <p className="error__message">{error}</p>}
+        <div className="form__field">
           <label htmlFor="username">Username</label>
           <input
             type="text"
@@ -47,7 +49,7 @@ const Login = () => {
             required
           />
         </div>
-        <div className="form-field">
+        <div className="form__field">
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -57,7 +59,7 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" className="login-button">
+        <button type="submit" className="login__button">
           Login
         </button>
       </form>
