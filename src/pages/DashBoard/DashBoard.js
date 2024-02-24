@@ -42,7 +42,7 @@ const DashBoard = () => {
                 <p>
                   total power:
                   <br />
-                  xxxxkwh
+                  2200kwh
                 </p>
               </div>
               <div>
@@ -50,7 +50,7 @@ const DashBoard = () => {
                 <p>
                   total water:
                   <br />
-                  xxxxkwh
+                  1870t
                 </p>
               </div>
             </div>
