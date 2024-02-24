@@ -1,7 +1,6 @@
 .team {
   color: white;
   font-size: 2rem;
-  // margin: 0 0.5rem;
   &__table {
     color: white;
     border-collapse: collapse;
@@ -22,7 +21,11 @@
       background-color: transparent;
     }
   }
-  &__tr {
-    //background-color: rgb(171, 209, 171);
+  &__form {
+    width: 80vw;
+  }
+  &__input {
+    width: 15vw;
+    height: 1.5rem;
   }
 }

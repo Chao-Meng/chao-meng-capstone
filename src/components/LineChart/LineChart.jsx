@@ -1,15 +1,11 @@
 import { ResponsiveLine } from "@nivo/line"; //for creating line chart
-import { useEffect, useState } from "react";
-//import energyData from "../../data/energyData.json";
 import "./LineChart.scss";
 import colors from "../../styles/partials/variables.scss";
 const LineChart = ({ data, title, vertical }) => {
   return (
     <div className="lineChart" style={{ height: 300 }}>
       <ResponsiveLine
-        // data={energyData}
         data={data}
-        //define the theme of chart
         theme={{
           axis: {
             domain: {
@@ -63,7 +59,6 @@ const LineChart = ({ data, title, vertical }) => {
           tickPadding: 5,
           tickRotation: 0,
           legend: vertical,
-          // Energy Consumption KW/h",
           legendOffset: -40,
           legendPosition: "middle",
         }}
@@ -80,7 +75,6 @@ const LineChart = ({ data, title, vertical }) => {
         //smooth transition
         curve="natural"
       />
-      {/* <p className="lineChart__title">Monthly {title} consumption</p> */}
     </div>
   );
 };

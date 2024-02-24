@@ -1,69 +1,42 @@
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./FAQ.scss";
+
 const FAQ = () => {
+  const [faqs, setFaqs] = useState([]);
+
+  useEffect(() => {
+    const fetchFaqs = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/faqs");
+        setFaqs(response.data);
+      } catch (error) {
+        console.error("Error fetching FAQs", error);
+      }
+    };
+
+    fetchFaqs();
+  }, []);
+
   return (
     <div className="FAQ">
-      {/* <Header title="FAQ" subtitle="Frequently Asked Questions Page" /> */}
-
-      <Accordion defaultExpanded className="FAQ__bg">
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>An Important Question</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion defaultExpanded className="FAQ__bg">
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Another Important Question</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion defaultExpanded className="FAQ__bg">
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Your Favorite Question</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion defaultExpanded className="FAQ__bg">
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Some Random Question</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion defaultExpanded className="FAQ__bg">
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>The Final Question</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+      {faqs.map((faq, index) => (
+        <Accordion key={index} defaultExpanded className="FAQ__bg">
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>{faq.question}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{faq.answer}</Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
     </div>
   );
 };

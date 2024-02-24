@@ -13,16 +13,9 @@ import "react-pro-sidebar/dist/css/styles.css";
 import profileImage from "../../assets/images/Mohan-muruge.jpg";
 import "./Sidebar.scss";
 const Item = ({ title, newPage, icon, selected, setSelected }) => {
-  //const theme = useTheme();
-  //const colors = tokens(theme.palette.mode);
   return (
     <MenuItem
       active={selected === title}
-      style={
-        {
-          // color: colors.grey[100],
-        }
-      }
       onClick={() => setSelected(title)}
       icon={icon}
     >
@@ -37,15 +30,7 @@ const Sidebar = () => {
   return (
     <ProSidebar className="Prosidebar">
       <Menu iconShape="square">
-        <MenuItem
-          icon={<MenuOutlinedIcon />}
-          style={
-            {
-              //margin: "10px 0 20px 0",
-              //color: colors.grey[100],
-            }
-          }
-        ></MenuItem>
+        <MenuItem icon={<MenuOutlinedIcon />}></MenuItem>
 
         <Box className="Box__container">
           <Box className="Box__img">
@@ -60,9 +45,7 @@ const Sidebar = () => {
           <Box textAlign="center">
             <Typography
               variant="h2"
-              //color={colors.grey[100]}
               fontWeight="bold"
-              //sx={{ m: "10px 0 0 0" }}
               icon={<PersonOutlinedIcon />}
             >
               Jone
@@ -90,14 +73,6 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
           </Link>
-
-          <Item
-            title="Profile Form"
-            newPage="/form"
-            icon={<PersonOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          />
           <Link to="/faq" className="Box__link">
             <Item
               title="FAQ Page"
@@ -116,7 +91,6 @@ const Sidebar = () => {
                   <PieChartOutlineOutlinedIcon />
                 </Link>
               }
-              // icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />{" "}

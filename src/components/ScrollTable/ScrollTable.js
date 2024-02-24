@@ -2,12 +2,6 @@ import React from "react";
 import "./ScrollTable.scss";
 
 const ScrollTable = () => {
-  //   const rows = new Array(10).fill(null).map((_, index) => ({
-  //     unit: 101 + index,
-  //     annual: "XX X",
-
-  //     buildingArea: "1000",
-  //   }));
   const rows = [
     { unit: 101, annual: "1000", buildingArea: "1000" },
     { unit: 102, annual: "1200", buildingArea: "1100" },
@@ -38,7 +32,6 @@ const ScrollTable = () => {
           <tr>
             <th>Unit</th>
             <th>Annual(kw.h)</th>
-            {/* <th>Monthly</th> */}
             <th>Area (m²)</th>
           </tr>
         </thead>
@@ -47,7 +40,6 @@ const ScrollTable = () => {
             <tr key={index}>
               <td>{row.unit}</td>
               <td>{row.annual}</td>
-              {/* <td>{row.monthly}</td> */}
               <td>{row.buildingArea}</td>
             </tr>
           ))}

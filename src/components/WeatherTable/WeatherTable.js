@@ -56,7 +56,6 @@ const WeatherTable = () => {
 
   return (
     <div className="weatherTable">
-      {/* <h2>The weather for the next three days</h2> */}
       <table className="weatherTable__table">
         <tbody>
           {weatherData.map((weather, index) => (

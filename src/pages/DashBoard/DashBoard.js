@@ -17,34 +17,14 @@ import building from "../../assets/images/building.png";
 import Table from "../../components/Table/Table";
 import WeatherTable from "../../components/WeatherTable/WeatherTable";
 import ScrollTable from "../../components/ScrollTable/ScrollTable";
-// import { tokens } from "../../theme";
-// import { Box, IconButton, Typography, useTheme } from "@mui/material";
-// import { MenuItem } from "react-pro-sidebar";
 
 const DashBoard = () => {
-  //const [selected, setSelected] = useState("");
   return (
     <div className="dashboard">
       <Sidebar className="dashboard__sidebar" />
       <section className="dashboard__container--big">
-        <Topbar />
-        <Header
-          className="dashboard__header"
-          title="Dashboard"
-          // subtitle="Welcome to Energy Dashboard"
-        />
+        <Header className="dashboard__header" title="Dashboard" />
         <div className="dashboard__container">
-          {/* <div className="dashboard__container--header">
-            <div className="dashboard__container--title">
-              <p className="dashboard__container--h5">Energy Consumption</p>
-              <h3 className="dashboard__container--h3">xxxxxxx</h3> 
-            </div>*/}
-          {/* <div className="dashboard__container-actions">
-              <button className="dashboard__container--download">
-                <DownloadOutlinedIcon />
-              </button>
-            </div>
-          </div> */}
           <div className="dashboard__chart">
             <div>
               <PieChart />
@@ -54,13 +34,9 @@ const DashBoard = () => {
             </div>
             <div>
               <ElectricityLineChart />
-              {/* <p className="linechart__title">
-                Monthly electricity consumption
-              </p> */}
             </div>
             <div>
               <WaterLineChart />
-              {/* //<p className="linechart__title">Monthly water consumption</p> */}
             </div>
           </div>
           <div className="dashboard__middlenCol">
@@ -92,7 +68,9 @@ const DashBoard = () => {
           </div>
           <div className="dashboard__other">
             <div className="dashboard__weathertable">
-              <p>whether for the next three days</p>
+              <p className="dashboard__content">
+                whether for the next three days
+              </p>
               <WeatherTable />
             </div>
             <div className="dashboard__scrolltable">
@@ -100,22 +78,22 @@ const DashBoard = () => {
               <ScrollTable />
             </div>
             <div className="dashboard__moreicons">
-              <p>Equipment statistics</p>
+              <p className="dashboard__text">Equipment statistics</p>
               <div>
                 <FlashOnIcon className="dashboard__icon" />
-                <p>
+                <p className="dashboard__text">
                   electricity meters:
                   <br />
-                  xxx
+                  1000
                 </p>
               </div>
               <div>
                 <WaterDropIcon className="dashboard__icon" />
-                <p>water meters: xxxx</p>
+                <p className="dashboard__text">water meters: 502</p>
               </div>
               <div>
                 <ThermostatIcon className="dashboard__icon" />
-                <p>temperature sensors: xxxx</p>
+                <p className="dashboard__text">temperature sensors: 2000</p>
               </div>
             </div>
           </div>

@@ -1,7 +1,6 @@
 import { ResponsivePie } from "@nivo/pie";
 import { useState, useEffect } from "react";
 import axios from "axios";
-//import electricData from "../../data/electricData.json"
 import "./PieChart.scss";
 import colors from "../../styles/partials/variables.scss";
 
@@ -22,7 +21,6 @@ const PieChart = () => {
   const theme = {
     labels: {
       text: {
-        fontFamily: "Arial, sans-serif",
         fill: colors.White,
       },
     },
@@ -41,7 +39,6 @@ const PieChart = () => {
         borderWidth={1}
         borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
       />
-      {/* <p className="pieChart__title">Percentage of total energy consumption</p> */}
     </div>
   );
 };

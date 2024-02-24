@@ -10,7 +10,6 @@ const Team = () => {
         <div className="linechart__chart">
           <TeamTable className="" />
         </div>
-        {/* <p className="linechart__title">Monthly electricity consumption</p> */}
       </div>
     </div>
   );

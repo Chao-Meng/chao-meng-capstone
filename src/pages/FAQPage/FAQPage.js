@@ -9,12 +9,8 @@ const FAQPage = () => {
         <Sidebar className="dashboard__sidebar" />
         <div>
           <p className="pieChart__title">Frequently asked question</p>
-          {/* <div className="piechart__container--small">
-          <div className="piechart__chart"> */}
           <FAQ className="FAQ__content" />
-          {/* </div> */}
         </div>
-        {/* </div> */}
       </div>{" "}
     </>
   );
