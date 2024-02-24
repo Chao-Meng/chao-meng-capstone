@@ -54,8 +54,7 @@ access to the app for controlling personal space settings or viewing environment
 
 How They Will Use It
 
-Monitoring and Reporting: Users will monitor real-time data on energy consumption, water usage, indoor air quality, etc., and generate
-reports for analysis.
+Monitoring and Reporting: Users will monitor real-time data on energy consumption, water usage, future weather, etc.
 
 Environmental Controls: Adjusting settings for heating, cooling, lighting, and ventilation to optimize comfort and efficiency.
 
@@ -92,7 +91,7 @@ Environmental Control Management
 
 As a user, I need to adjust environmental settings like temperature, lighting, and ventilation remotely, ensuring optimal comfort and energy efficiency.
 
-\*\*Historical Data Analysis and Reporting
+\*\*Historical Data Analysis
 
 As a facility manager, I need to access historical data on energy and water usage to track trends over time and make informed decisions for future planning.
 Customizable Alerts and Notifications
@@ -111,10 +110,6 @@ As a maintenance manager, I need to schedule regular maintenance checks and trac
 
 As a user, I want an interactive dashboard that visually displays energy and environmental data, making it easy to interpret complex information quickly.
 
-\*\*Mobile Application Access
-
-As a remote user, I need to access the system through a mobile application, allowing me to monitor and control the building’s systems while on the go.
-
 \*\*Predictive Maintenance Analysis
 
 As a building operator, I want the system to predict potential maintenance issues based on data trends, so I can proactively address them before they escalate.
@@ -122,13 +117,6 @@ As a building operator, I want the system to predict potential maintenance issue
 \*\*Compliance Reporting
 
 As a sustainability manager, I need to generate compliance reports on energy usage and sustainability metrics to adhere to regulatory standards.
-
-\*\*Tenant Feedback Interface
-
-As a tenant, I want to provide feedback on building conditions and suggest improvements, contributing to a comfortable and efficient building environment.
-Integration with Existing Systems
-
-As a building manager, I need the app to integrate seamlessly with existing building management systems and IoT devices for centralized control.
 
 \*\*Resource Optimization Recommendations
 
