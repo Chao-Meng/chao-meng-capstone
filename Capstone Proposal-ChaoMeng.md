@@ -146,74 +146,102 @@ As an admin, I need all data to be securely stored and backed up regularly to pr
 
 List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
 
-**Front-end**: React (for building user interfaces), HTML and CSS (for layout and styling), tailwind.
+**Front-end**: React (for building user interfaces), component library(nivo,@mui), HTML and CSS (for layout and styling), .
 
 **Back-end**: Node.js and Express (for handling API requests and providing mock data).
 
-**Database**: MongoDB or JSON files (for storing mock data)
+**Database**: MySQL (for storing mock data)
 
 ### APIs
 
 List any external sources of data that will be used in your app.
-\*\*Since I can't access the sensors to get the data, if I have enough time ,i will create my home-built APIs, and some fake data.If not I will use json file to store my mock data.
+\*\*Since I can't access the sensors to get the data, i created my home-built APIs, and some fake data. I stored all mock data in MySQL.
 \*\*1. Energy Usage Data API
-\*\*GET /api/energy
-Description: Retrieve current energy usage data, including electricity and water consumption.
-Return Value: Timestamp, electricity consumption, water consumption.
-\*\*2. Environmental Control Data API
-\*\*GET /api/environment
+\*\*GET /api/electricData
+Description: Retrieve current energy usage data.
+Return Value: Timestamp, electricity consumption.
 
-Description: Get current environmental control data, such as indoor temperature, humidity, etc.
-Return Value: Indoor temperature, humidity, lighting level.
-\*\*POST /api/environment
-
-Description: Update environmental control settings.
-Input Parameters: New temperature setting, humidity setting, lighting level.
-\*\*3. Weather Data API
+\*\*2. Weather Data API
 \*\*GET /api/weather
 Description: Obtain simulated external weather data.
-Return Value: Current temperature, weather condition (sunny, rainy, etc.), probability of precipitation.
-\*\*4. Maintenance and Alarm Log API
-\*\*GET /api/maintenance
+Return Value: Current temperature, weather condition (sunny, rainy, etc.),
+\*\*3. total energy consumption
+\*\*GET /api/electricData
 
-Description: Obtain equipment maintenance and alarm logs.
-Return Value: Device name, maintenance date, type of alert, status.
-\*\*POST /api/maintenance
+Description: Obtain all kinds of energy consumption.
+Return Value: energy type, percentage of consumption.
+4.\*\*POST /api/team
 
-Description: Record new maintenance activities or alarms.
-Input Parameters: Device name, details of maintenance or alarm.
+Description: add new members.
+Input Parameters: id,name,phone number, email, title.
+\*\*GET /api/team
+
+Description: get all members.
+Return Value: id, name,phone number, email, title of all members.
+
+\*\*DELETE /api/team/:id
+
+Description: delete memeber selected.
+5.\*\*POST /login
+
+Description: login.
+Input Parameters: username and password.
+6.\*\*GET /api/faqs
+
+Description: get all questions and answers.
+Return value: all questions and answers.
+
+7.\*\*GET /api/waterData
+
+Description: get all water consumption.
+Return value: all water consumption for every month.
+
+8.\*\*GET /api/energyData
+
+Description: get all energy consumption.
+Return value: all energy consumption for every month.
 
 ### Sitemap
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
-\*\*Login:login via email and verify code
+\*\*Login:login via username and password, admin will set the username and password for user
 \*\*Dashboard:my main page, shows all function, please see the pic.
-\*\*Team Member and admin authority:manager team member and admin.
+\*\*Team Member and admin authority:manager team member to add or delete and admin.
 \*\*Total energy consumption Pie Chart:a pie chart from dashboard, but it occupy the whole page.
 \*\*ElectricityData Line Chart:a line chart from dashboard, but it occupy the whole page.
 \*\*WaterData Line Chart:a line chart from dashboard, but it occupy the whole page.
+\*\*FAQS:users could find some frequently questions and solution.
 
 ### Mockups
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
+![login](./login.png)
 ![dashboard](./dashboard.jpg)
-other pages almost comes from this dashboard
+![homepage-Dashboard](./homepage-dashboard.png)
+![teamMember](./teamMember.png)
+![FAQS](./FAQS.png)
+![pieChart](./piechart.png)
+![powerLineChart](./energyLinechart.png)
+![waterLineChart](./waterlineChart.png)
+
 ### Data
 
 I will make some mock data for electricity and water consumption.I am not sure if I will store them in database or json, it depends on time.
 
 ### Endpoints
+
 \*\*Login:"/login" get
-\*\*Dashboard:"/"  get
+\*\*Dashboard:"/" get
 \*\*Team Member and admin authority:"/team" get(display all memebers), post(add new member),delete(delete some members)
-\*\*Total energy consumption Pie Chart:"/electricityPieChart" get 
-\*\*ElectricityData Line Chart:"/electricityLineChart" get 
-\*\*WaterData Line Chart:"/waterLineChart" get 
+\*\*FAQS:"/faqs" get
+\*\*Total energy consumption Pie Chart:"/electricityPieChart" get
+\*\*ElectricityData Line Chart:"/electricityLineChart" get
+\*\*WaterData Line Chart:"/waterLineChart" get
 
 ### Auth
 
-Login via email and verify code(expiry 5 min)
+Login via username and password
 
 ## Roadmap
 
@@ -242,7 +270,3 @@ Project Demonstration Preparation and Delivery: 1 day
 ## Nice-to-haves
 
 Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
-
-
-
-
