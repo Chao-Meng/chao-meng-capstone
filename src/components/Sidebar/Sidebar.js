@@ -10,7 +10,7 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
-import profileImage from "../../assets/images/Mohan-muruge.jpg";
+import profileImage from "../../assets/images/chao.jpeg";
 import "./Sidebar.scss";
 const Item = ({ title, newPage, icon, selected, setSelected }) => {
   return (
@@ -37,7 +37,7 @@ const Sidebar = () => {
             <img
               alt="profile"
               width="150px"
-              height="150px"
+              height="180px"
               src={profileImage}
               style={{ cursor: "pointer", borderRadius: "50%" }}
             />
@@ -48,7 +48,7 @@ const Sidebar = () => {
               fontWeight="bold"
               icon={<PersonOutlinedIcon />}
             >
-              Jone
+              Chao
             </Typography>
             <Typography>Energy Manager</Typography>
           </Box>
